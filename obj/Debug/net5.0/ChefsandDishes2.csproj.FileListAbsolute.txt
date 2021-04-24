@@ -1,0 +1,8 @@
+/Volumes/Samsung_T5/Dojo_Assignments/CSharp/ChefsandDishes2/obj/Debug/net5.0/ChefsandDishes2.csprojAssemblyReference.cache
+/Volumes/Samsung_T5/Dojo_Assignments/CSharp/ChefsandDishes2/obj/Debug/net5.0/ChefsandDishes2.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/Samsung_T5/Dojo_Assignments/CSharp/ChefsandDishes2/obj/Debug/net5.0/ChefsandDishes2.AssemblyInfoInputs.cache
+/Volumes/Samsung_T5/Dojo_Assignments/CSharp/ChefsandDishes2/obj/Debug/net5.0/ChefsandDishes2.AssemblyInfo.cs
+/Volumes/Samsung_T5/Dojo_Assignments/CSharp/ChefsandDishes2/obj/Debug/net5.0/ChefsandDishes2.csproj.CoreCompileInputs.cache
+/Volumes/Samsung_T5/Dojo_Assignments/CSharp/ChefsandDishes2/obj/Debug/net5.0/ChefsandDishes2.MvcApplicationPartsAssemblyInfo.cache
+/Volumes/Samsung_T5/Dojo_Assignments/CSharp/ChefsandDishes2/obj/Debug/net5.0/ChefsandDishes2.RazorAssemblyInfo.cache
+/Volumes/Samsung_T5/Dojo_Assignments/CSharp/ChefsandDishes2/obj/Debug/net5.0/ChefsandDishes2.RazorAssemblyInfo.cs

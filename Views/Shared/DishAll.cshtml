@@ -1,0 +1,58 @@
+@* lowercase model defines the type of data this page is sent. *@
+@* capital M model is to access the data. *@
+@model List<Dish>
+
+<div class="container">
+  <h2 class="text-center">All Dishes</h2>
+  <hr>
+  <form asp-controller="Home" asp-action = "ChefAll" method = "GET">
+    <button type="submit" class="btn btn-outline-secondary">Chefs</button>
+    </form>
+    <form asp-controller="Home" asp-action = "DishNew" method = "GET">
+    <button type="submit" class="btn btn-outline-secondary">Add a Dish</button>
+    </form>
+
+  @foreach (Dish dish in Model)
+  {
+    <div class="card shadow-sm rounded mx-auto w-50 mb-3">
+      <h4 class="card-title text-center bg-dark text-light py-2 rounded-top">
+
+        @* asp-route-nameOfParameter="valueOfParameter" *@
+        <a asp-controller="Home" asp-action="Details" asp-route-dishId="@dish.DishId">
+          Name: @dish.Name
+        </a>
+
+        @* <a href="posts/@post.PostId">
+          @post.Topic
+          </a> *@
+      </h4>
+      <div class="card-body">
+        @* <p class="card-text">
+          Le Chef: @dish.Chef
+        </p> *@
+        <p class="card-text">
+          Tastiness: @dish.Tastiness
+        </p>
+        <p class="card-text">
+          Calories: @dish.Calories
+        </p>
+        <p class="card-text">
+          Description: @dish.Description
+        </p>
+        <small class="text-muted">
+          Submitted: @dish.CreatedAt
+        </small>
+      </div>
+
+      <div class="card-footer text-center">
+        <form asp-controller="Home" asp-action="Delete" asp-route-dishId=@dish.DishId method="POST"
+        class="d-inline-block">
+          <button class="btn btn-outline-danger">Delete</button>
+        </form>
+
+        <a asp-controller="Home" asp-action="Edit" asp-route-dishId=@dish.DishId method = "GET"
+        class="btn btn-outline-warning">Edit</a>
+      </div>
+    </div>
+  }
+</div>

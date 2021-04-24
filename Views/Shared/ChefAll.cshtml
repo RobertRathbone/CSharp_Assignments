@@ -1,0 +1,64 @@
+@* lowercase model defines the type of data this page is sent. *@
+@* capital M model is to access the data. *@
+@model List<Chef>
+
+<div class="container">
+  <h2 class="text-center">All Chefs</h2>
+  <hr>
+    <form asp-controller="Home" asp-action = "DishAll" method = "GET">
+    <button type="submit" class="btn btn-outline-secondary">Dishes</button>
+    </form>
+    <form asp-controller="Home" asp-action = "ChefNew" method = "GET">
+    <button type="submit" class="btn btn-outline-secondary">Add a Chef</button>
+    </form>
+
+  @foreach (Chef chef in Model)
+  {
+    <div class="card shadow-sm rounded mx-auto w-50 mb-3">
+      <h4 class="card-title text-center bg-dark text-light py-2 rounded-top">
+
+        @* asp-route-nameOfParameter="valueOfParameter" *@
+        <a asp-controller="Home" asp-action="ChefDetails" asp-route-dishId="@chef.ChefId">
+          First Name: @chef.FirstName
+        </a>
+
+        @* <a href="posts/@post.PostId">
+          @post.Topic
+          </a> *@
+      </h4>
+      <div class="card-body">
+        <p class="card-text">
+          Chef: @chef.LastName
+        </p>
+        <p class="card-text">
+            @{
+                var today = DateTime.Today;
+                var age = today.Year - chef.DOB.Year;
+               <span>Age:</span> @age
+            }
+        </p>
+
+        @* Want to fix this *@
+
+        @* <p>@{
+          var count = chef.Dishes.Count();
+          <span>Number of dishes:</span> @count
+          }
+        </p> *@
+        <small class="text-muted">
+          Member since: @chef.CreatedAt
+        </small>
+      </div>
+
+      @* <div class="card-footer text-center">
+        <form asp-controller="Home" asp-action="Delete" asp-route-dishId=@dish.DishId method="POST"
+        class="d-inline-block">
+          <button class="btn btn-outline-danger">Delete</button>
+        </form>
+
+        <a asp-controller="Home" asp-action="Edit" asp-route-dishId=@dish.DishId method = "GET"
+        class="btn btn-outline-warning">Edit</a>
+      </div> *@
+    </div>
+  }
+</div>
