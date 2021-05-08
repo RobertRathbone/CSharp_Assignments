@@ -1,0 +1,15 @@
+/Volumes/Samsung_T5/Dojo_Assignments/CSharp/HungryNinja/bin/Debug/net5.0/HungryNinja.deps.json
+/Volumes/Samsung_T5/Dojo_Assignments/CSharp/HungryNinja/bin/Debug/net5.0/HungryNinja.runtimeconfig.json
+/Volumes/Samsung_T5/Dojo_Assignments/CSharp/HungryNinja/bin/Debug/net5.0/HungryNinja.runtimeconfig.dev.json
+/Volumes/Samsung_T5/Dojo_Assignments/CSharp/HungryNinja/bin/Debug/net5.0/HungryNinja.dll
+/Volumes/Samsung_T5/Dojo_Assignments/CSharp/HungryNinja/bin/Debug/net5.0/ref/HungryNinja.dll
+/Volumes/Samsung_T5/Dojo_Assignments/CSharp/HungryNinja/bin/Debug/net5.0/HungryNinja.pdb
+/Volumes/Samsung_T5/Dojo_Assignments/CSharp/HungryNinja/obj/Debug/net5.0/HungryNinja.csprojAssemblyReference.cache
+/Volumes/Samsung_T5/Dojo_Assignments/CSharp/HungryNinja/obj/Debug/net5.0/HungryNinja.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/Samsung_T5/Dojo_Assignments/CSharp/HungryNinja/obj/Debug/net5.0/HungryNinja.AssemblyInfoInputs.cache
+/Volumes/Samsung_T5/Dojo_Assignments/CSharp/HungryNinja/obj/Debug/net5.0/HungryNinja.AssemblyInfo.cs
+/Volumes/Samsung_T5/Dojo_Assignments/CSharp/HungryNinja/obj/Debug/net5.0/HungryNinja.csproj.CoreCompileInputs.cache
+/Volumes/Samsung_T5/Dojo_Assignments/CSharp/HungryNinja/obj/Debug/net5.0/HungryNinja.dll
+/Volumes/Samsung_T5/Dojo_Assignments/CSharp/HungryNinja/obj/Debug/net5.0/ref/HungryNinja.dll
+/Volumes/Samsung_T5/Dojo_Assignments/CSharp/HungryNinja/obj/Debug/net5.0/HungryNinja.pdb
+/Volumes/Samsung_T5/Dojo_Assignments/CSharp/HungryNinja/obj/Debug/net5.0/HungryNinja.genruntimeconfig.cache
