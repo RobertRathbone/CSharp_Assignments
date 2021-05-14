@@ -1,0 +1,32 @@
+@using Dojodachi.Models
+@model Dojodachi.Models.Dachi
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Dojodachi</title>
+        <link rel="stylesheet" href="~/css/style.css"/>
+    </head>
+<body>
+@{
+<p> Fullness: @Context.Session.GetInt32("Fullness") Happiness: @Context.Session.GetInt32("Happiness") 
+Energy: @Context.Session.GetInt32("Energy") Meals: @Context.Session.GetInt32("Meals") </p>
+}
+<div class = "container">
+
+   <div class = "jumbotron">
+    <h1> Winner </h1>
+      
+      <p>
+         @ViewBag.Jim
+      </p>
+   </div>
+   
+</div>
+    @* <p>Learn about @Context.Session.GetString("findCode")</p> *@
+    <form action = "restart" method = "get">
+    <button type="submit" class="btn btn-outline-secondary">Restart</button>
+    </form>
+</div>
+</body>
+</html>
