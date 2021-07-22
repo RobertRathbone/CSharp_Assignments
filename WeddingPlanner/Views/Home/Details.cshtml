@@ -1,0 +1,25 @@
+@model Wedding
+<form asp-action = "Logout" asp-controller="Home"
+    method = "POST">
+        <button type = "submit" class = "btn-primary btn-lg"  >Logout</button>
+</form>
+<form asp-action = "Success" asp-controller="Home"
+    method = "GET">
+        <button type = "submit" class = "btn-primary btn-lg"  >Dashboard</button>
+</form>
+<h2>@Model.WedderOne And @Model.WedderTwo's Wedding</h2>
+@Model.Date.ToString("MMMM d, yyyy")
+
+<h3>Guests:</h3>
+<ul class="list-unstyled">
+  @foreach (WeddingAttendees attendee in Model.Attendees)
+  {
+    <li>
+      @attendee.Attendee.FullName()
+    </li>
+    @* <li>
+      @rsvp.Guest.FirstName @rsvp.Guest.LastName
+      </li> *@
+  }
+</ul>
+

@@ -1,0 +1,130 @@
+@model List<Wedding>
+
+  @{
+  int? uid = Context.Session.GetInt32("UserId");
+}
+
+@* <p> @Context.Session.GetString("FirstName")</p> *@
+    <form asp-action = "Logout" asp-controller="Home"
+    method = "POST">
+        <button type = "submit" class = "btn-primary btn-lg"  >Logout</button>
+    </form>
+ <h1 class="display-4">Welcome to the Hitchin' Post</h1>
+
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Wedding</th>
+      <th scope="col">Date</th>
+      <th scope="col">Guests</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  </table>
+
+ @{foreach (Wedding wedding in Model){
+bool isAlreadyAttending = wedding.Attendees.Any(r => r.UserId == uid);
+<table class="table table-dark">
+  <tbody>
+    <tr>
+      <th scope="col"><a asp-controller="Home"
+   asp-action= "Details" asp-route-weddingid="@wedding.WeddingId">@wedding.WedderOne</a> <span> and </span> <a asp-controller="Home"
+   asp-action= "Details" asp-route-weddingid="@wedding.WeddingId">@wedding.WedderTwo</a></th>
+      <th scope="col">@wedding.Date.Date</th>
+      <th scope="col">@wedding.Attendees.Count</th>
+      <th scope="col">
+        
+        @{if (Context.Session.GetInt32("UserId") == @wedding.UserId)
+        {
+        <a asp-controller="Home"
+   asp-action= "Delete" asp-route-weddingid="@wedding.WeddingId" method = "GET" >Delete</a>
+        }
+        else
+        {
+        <form asp-controller="Home" asp-action="RSVP" asp-route-weddingId="@wedding.WeddingId" method="POST">
+              <button class="btn btn-sm btn-outline-secondary">
+                @if (isAlreadyAttending)
+                {
+                  <span>Un-RSVP</span>
+                }
+                else
+                {
+                  <span>RSVP</span>
+                }
+              </button>
+            </form>
+          }}
+   </th>
+    </tr>
+  </tbody>
+</table>
+
+
+    }}
+
+  <form asp-controller="Home" asp-action = "PlanWedding" method = "GET">
+    <button type="submit" class="btn btn-outline-secondary">Plan a Weddin'</button>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* 
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table> *@

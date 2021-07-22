@@ -1,0 +1,36 @@
+@model Wedding
+<div class="btn-group">
+    <form asp-action = "Logout" asp-controller="Home"
+        method = "POST">
+            <button type = "submit" class = "btn-primary btn-lg"  >Logout</button>
+    </form>
+    <form asp-action = "Success" asp-controller="Home"
+        method = "GET">
+            <button type = "submit" class = "btn-primary btn-lg"  >Dashboard</button>
+    </form>
+    <h2 class="text-center"> Plan yer Weddin'</h2>
+</div>
+
+<div class="w-50 mx-auto">
+  
+<form asp-action ="Create" asp-controller="Home" method = "POST">
+  <div class="form-group">
+    <label asp-for="WedderOne">WedderOne</label>
+    <input asp-for="WedderOne" type="text" class="form-control" id="WedderOne" aria-describedby="emailHelp" placeholder="Hitcher">
+  </div>
+  <div class="form-group">
+    <label asp-for="WedderTwo">WedderTwo</label>
+    <input asp-for="WedderTwo" type="text" class="form-control" id="WedderTwo" placeholder="Hitchee">
+  </div>
+  <div class="form-group">
+    <label asp-for="Date">Date</label>
+    <input asp-for="Date" type="Date" class="form-control" id="Date" placeholder="Date">
+  </div>
+  <div class="form-group">
+    <label asp-for="Address">Address</label>
+    <input asp-for="Address" type="Address" class="form-control" id="Date" placeholder="Address">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
