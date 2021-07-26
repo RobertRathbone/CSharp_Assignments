@@ -1,0 +1,29 @@
+@model Transaction
+
+<div class="jumbotron">
+  <h1 class="display-4">World Bank... or such</h1>
+  <p class="lead">Balance: 
+    @{ decimal balance = ViewBag.total;
+      balance = (decimal)System.Math.Round(balance,2);
+      <p> @balance</p>}
+  </p>
+  <p> Welcome @Context.Session.GetString("FirstName")</p>
+  <hr class="my-4">
+  <form asp-action = "Deposit" asp-controller="Home" method = "POST">
+    <input asp-for= "Amount" type = "decimal"  value = "Amount">
+        <button type = "submit" class = "btn-primary btn-lg"  >Deposit</button>
+    </form>
+  @{ foreach (Transaction transaction in ViewBag.transactions)
+    { decimal value = transaction.Amount;
+      value = (decimal)System.Math.Round(value,2);
+      <p> @value</p>}}
+
+  <p class="lead">
+
+    <form asp-action = "Logout" asp-controller="Home"
+    method = "POST">
+        <button type = "submit" class = "btn-primary btn-lg"  >Logout</button>
+    </form>
+    
+  </p>
+</div>
